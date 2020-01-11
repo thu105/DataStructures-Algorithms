@@ -7,12 +7,14 @@ import {
   MatButtonModule,
   MatIconModule,
   MatListModule,
+  MatTreeModule,
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SideNavbarComponent } from './side-navbar/side-navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ContentTreeComponent } from './content-tree/content-tree.component';
 
 const material = [
   MatToolbarModule,
@@ -20,12 +22,14 @@ const material = [
   MatButtonModule,
   MatIconModule,
   MatListModule,
+  MatTreeModule,
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideNavbarComponent
+    SideNavbarComponent,
+    ContentTreeComponent
   ],
   imports: [
     BrowserModule,

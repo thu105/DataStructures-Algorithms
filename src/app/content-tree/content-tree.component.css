@@ -1,0 +1,13 @@
+.type-icon {
+  color: #757575;
+  margin-right: 5px;
+}
+.column{
+  flex: 20%;
+  text-align: center;
+}
+
+.mat-tree{
+  padding-left: 16px;
+  padding-right: 16px;
+}

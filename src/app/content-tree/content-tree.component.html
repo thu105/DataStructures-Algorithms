@@ -1,0 +1,35 @@
+<mat-toolbar>
+  <mat-toolbar-row>Data Structures</mat-toolbar-row>
+  <mat-toolbar-row>
+    <button mat-icon-button disabled></button>
+    <div class="column">Name</div>
+    <div class="column">Access</div>
+    <div class="column">Search</div>
+    <div class="column">Insert</div>
+    <div class="column">Delete</div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle matTreeNodePadding>
+    <button mat-icon-button disabled></button>
+    <div class="column">{{node.name}}</div>
+    <div class="column">{{node.access}}</div>
+    <div class="column">{{node.search}}</div>
+    <div class="column">{{node.insert}}</div>
+    <div class="column">{{node.delete}}</div>
+  </mat-tree-node>
+
+  <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+    <button mat-icon-button matTreeNodeToggle
+            [attr.aria-label]="'toggle ' + node.name">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    <div class="column">{{node.name}}</div>
+    <div class="column">{{node.access}}</div>
+    <div class="column">{{node.search}}</div>
+    <div class="column">{{node.insert}}</div>
+    <div class="column">{{node.delete}}</div>
+  </mat-tree-node>
+</mat-tree>

@@ -3,6 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+
 @Component({
   selector: 'app-side-navbar',
   templateUrl: './side-navbar.component.html',
@@ -16,6 +17,11 @@ export class SideNavbarComponent {
       shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver
+  )
+  {
+
+  }
 
 }
